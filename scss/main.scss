@@ -1,0 +1,83 @@
+@import "vars";
+@import "mixins";
+
+.titleBox {
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+  p {
+    font-size: 48px;
+    line-height: 1.2;
+    strong {
+      font-weight: 700;
+      position: relative;
+      text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: -10px;
+        right: -10px;
+        height: 10px;
+        bottom: 10px;
+        background-color: #f00;
+        border-radius: 100px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+#main {
+  .section {
+    background-size: cover;
+    background-position: 50%;
+    color: #fff;
+    &#happen {
+      video {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+      }
+    }
+    &#business {
+      background-image: url("../images/main/bgBusiness.jpg");
+    }
+    &#portfolio {
+      background-image: url("../images/main/bgPortfolio.png");
+    }
+    &#community {
+      background-image: url("../images/main/bgCommunity.jpg");
+    }
+    &#footer {
+      background-color: #fff;
+      color: #666;
+      text-align: center;
+      padding: 50px 0;
+      .title {
+        font-size: 18px;
+      }
+      .address {
+        margin: 20px 0;
+      }
+      .copyright {
+        font-size: 14px;
+      }
+      p {
+        margin: 10px 0;
+        strong {
+          font-weight: 500;
+          color: #111;
+        }
+      }
+    }
+  }
+}

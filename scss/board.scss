@@ -1,0 +1,110 @@
+//회원가입...
+//공지사항...
+//form관련 css
+@import "vars";
+@import "mixins";
+.board {
+  width: 100%;
+  border-top: 1px solid $main-color;
+  tr {
+    border-bottom: 1px solid $border-color;
+    &:hover {
+      background-color: $light-gray-color;
+    }
+    th,
+    td {
+      padding: 15px 0;
+      text-align: center;
+    }
+    .subject {
+      text-align: left;
+    }
+  }
+}
+.pagination {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  ul {
+    display: flex;
+    margin: 0 20px;
+    .active {
+      a {
+        background-color: $main-color;
+        border-color: $main-color;
+        color: $white-color;
+        overflow: hidden;
+        @include longShadow(darken($main-color, 20), right, 30);
+      }
+    }
+  }
+  a {
+    width: 40px;
+    height: 40px;
+    @include flexCenter();
+    border: 1px solid $border-color;
+  }
+}
+.searchBox {
+  padding: 50px 0;
+  margin-top: 50px;
+  background: $light-gray-color;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid$border-color;
+  border-bottom: 1px solid $border-color;
+
+  input[type="text"] {
+    height: 40px;
+    padding: 15px 0;
+    min-width: 400px;
+    margin: 0;
+    border-radius: 0;
+    border: none;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+  }
+  select {
+    height: 40px;
+    min-width: 150px;
+  }
+  button {
+    height: 40px;
+    background-color: $text-color;
+    color: #fff;
+    padding: 0 20px;
+  }
+}
+.btns {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 50px;
+  &.right {
+    justify-content: flex-end;
+  }
+  &.center {
+    justify-content: center;
+  }
+  .btn {
+    height: 50px;
+    padding: 0 40px;
+    border-radius: 5px;
+    background-color: $main-color;
+    overflow: hidden;
+    color: #fff;
+    margin: 0 5px;
+    @include flexCenter();
+    &.normal {
+      border-color: $main-color;
+      @include longShadow(darken($main-color, 10), right, 40);
+    }
+    &.confirm {
+      border-color: $main-color;
+      @include longShadow(darken($main-color, 10), right, 40);
+    }
+    &.cancel {
+      border-color: $main-color;
+      @include longShadow(darken($main-color, 10), right, 40);
+    }
+  }
+}
